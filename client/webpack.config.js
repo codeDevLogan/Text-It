@@ -28,22 +28,25 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js'
       }),
+
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: 'Text It',
         short_name: 'Text',
         description: 'This is a text editor.',
+        start_url: './',
+        publicPath: './',
+        display: 'standalone',
+        background_color: '#31a9e1',
+        theme_color: '#31a9e1',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 512],
-            // destination: path.join('assets', 'icon'),
+            destination: path.join('assets', 'logo'),
           }
-        ],
-        display: 'standalone',
-        start_url: './',
-        publicPath: './',
-        background_color: '#31a9e1',
-        theme_color: '#31a9e1'
+        ]
       }),
 
     ],

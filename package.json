@@ -1,5 +1,5 @@
 {
-  "name": "Text-It",
+  "name": "Just Another Text Editor",
   "version": "1.0.0",
   "description": "This is a text editor application built as a PWA",
   "main": "server.js",
